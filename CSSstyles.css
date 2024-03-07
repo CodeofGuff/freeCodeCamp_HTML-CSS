@@ -16,6 +16,7 @@ h1 {
     /*COLOR STOPS (255, 0, 0) ->75%<- where the transition takes place*/
     box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
     /*APPLY ONE OR MORE SHADOWS TO AN ELEMENT offsetX offsetY blueRadius spreadRadius color*/
+    /*APPLY ONE OR MORE SHADOWS TO AN ELEMENT offsetX offsetY blueRadius spreadRadius color*/
 }
 .green {
     background: linear-gradient(#55680D, #71F53e, #116C31);
