@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Survstyles.css">
+    <link rel="stylesheet" href="survstyles.css">
     <title>Prototype Survey</title>
 </head>
 <body>
@@ -11,12 +11,12 @@
     <p id='description'>Please complete this survey of your use of the XJ-1 Prototype</p>
         <form id='survey-form'>
         <fieldset>
-            <label id='name-label'>Name <input placeholder='Enter your name' name='name' type='text' id='name' required></label>
-            <label id='email-label'>Email <input placeholder="Enter your email" name='email' type='email' id='email' required></label>
-            <label id='number-label'>Number <input placeholder="Enter your Phone #" name='number' id='number' type='tel' min="1" max="999999999" required> </label>
+            <label for='name'>Name <input placeholder='Enter your Name' name='name' type='text' id='name' required></label>
+            <label for='employee'>Employee Number <input placeholder="Enter your Number" name='number' type='number' id='number' required></label>
+            <label for='badge'>Badge ID <input placeholder="Enter your Badge ID" name='badge' id='badge' type='number' required> </label>
         </fieldset>
         <fieldset>
-            <label for="dropdown">Where did you test the XJ-1?:</label>
+            <label for="dropdown"><Strong>Where did you test the XJ-1?:</strong></label>
             <select id="dropdown" required>
                     <option value="">Select One</option>
                     <option value="1">Outdoors</option>
@@ -24,14 +24,15 @@
                     <option value="3">Outdoors Open Field</option>
                     <option value="4">Indoors Enclosed Space</option>
                 </select>
-            <label id='radio'>Where there any accidents when using the XJ-1?</label>
-                <input class='inline' type='radio' id='yes' name="yes-no" value="yes" checked> Yes
-                <input class='inline' type='radio' id="no" name="yes-no" value="no"> No
-            <label id="checkbox">If there was an accident, what type was it?</label>
-                Explosive <input class='inline' type="checkbox" id="accident-type" value='Expl' checked>
-                Refraction <input class='inline' type="checkbox" id="accident-type" value="Refr">
-                Other <input class='inline' type="checkbox" id="accident-type" value="Othr">
-            <label id='textarea'> If 'Other' please explain:</label> <textarea type="textarea" placeholder="Okay so the craziest thing happened..." rows="4" cols="30"></textarea>
+                <label id='radio'><strong>Were there any accidents when using the XJ-1?</strong></label>
+                    <label for='yes'><input class='inline' type='radio' id='yes' name="yes-no" value="yes" checked> Yes</label>
+                    <label for='no'><input class='inline' type='radio' id="no" name="yes-no" value="no"> No</label>
+                <label id="checkbox"><strong>If there was an accident, what type was it?</strong></label>
+                    <label for='explosive'>Explosive <input class='inline' type="checkbox" id="accident-explosive" value='Expl' checked></label>
+                    <label for='refraction'>Refraction <input class='inline' type="checkbox" id="accident-refraction" value="Refr"></label>
+                    <label for="other">Other <input class='inline' type="checkbox" id="accident-other" value="Othr"></label>
+                <label for='textarea'><em>If 'Other' please explain:</em></label>
+                <textarea id="otherExplanation" placeholder="Okay so the craziest thing happened..." rows="4" cols="30"></textarea>
         </fieldset>
         <button type='submit' id="submit">Submit</button>
         </form>

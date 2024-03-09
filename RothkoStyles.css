@@ -3,13 +3,13 @@
 /*BODY*/
 .frame {
     border: 50px solid black;
-    width: 500px;
+    width: 300px;
     padding: 50px; /*ADJUST SPACING WITHIN AN ELEMENT / FRAME ON EDGES vs EDGES SPACES*/
     margin: 20px auto; /*VERTICAL x HORIZONTAL */
 }
 .canvas {
-    width: 500px;
-    height: 600px;
+    width: 300px;
+    height: 400px;
     background-color: #4d0f00;
     overflow: hidden;
     /* padding: 1px; Adding 1 pixel of padding to the top, bottom, left, and right of the canvas 
@@ -17,8 +17,8 @@
     Replace the padding property with overflow set to hidden*/
 }
 .one {
-    width: 425px;
-    height: 150px;
+    width: 225px;
+    height: 90px;
     background-color: #efb762;
     margin: 20px auto;
 }

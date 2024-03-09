@@ -1,23 +1,34 @@
-form {
-    margin: 0 auto;
-    max-width: 500px;
-    min-width: 300px;
-    width: 60vw;
-    padding-bottom: 2em; 
+body {
+    width: 100%;
+    height: 100vh; /*Variable Height*/
+    margin: 0; /*ELIMINATES SCROLL BAR*/
+    font-family: tahoma;
+    font-size: 16px;
+    background-color: #b8b8b8b7;
 }
 h1, p {
-    margin: 0 auto;
+    margin: 1em auto;
     text-align: center;
-    padding: 10px;
 }
-fieldset {
-padding: 2rem 0;
-border: none;
-border-bottom: 3px solid #3b3b4f; 
-} 
+form {
+    margin: 0 auto;
+    max-width: 500px; /*PLACES THE FORM IN THE CENTER*/
+    min-width: 300px;
+    width: 60vw; /* vw = Variable Width GIVING IT A RANGE*/
+    padding-bottom: 2em; /* ADD SPADDING ONLY TOP BOTTOM OF FORM*/ 
+}
+fieldset { /*REMOVE BORDER AND PADDING OF BOXES*/
+    padding: 2rem 0;
+    border: none;
+    border-bottom: 3px solid #000000; /*SEPERATES FIELDSETS*/
+}
+fieldset:last-of-type { /*You can select the last element of a specific type 
+    using the last-of-type CSS pseudo-class, like this: 'fieldset:last-of-type { }' */
+    border-bottom: none;
+}
 label {
-    display: block;
-    margin: .5rem 0;
+    display: block; /*PLACES LABELS WITHIN FIELDSETS ABOvE/BELOW*/
+    margin: 0,5rem 0;
 }
 input,
 textarea,
@@ -25,13 +36,6 @@ select {
     margin: 10px 0 0 0;/*TOP RIGHT BOTTOM LEFT*/
     width: 100%;
     min-height: 2em;
-}
-body {
-    width: 100%;
-    height: 100vh; /*Variable Height*/
-    margin: 0; /*ELIMINATES SCROLL BAR*/
-    font-family: tahoma;
-    font-size: 16px;
 }
 .inline {
     width: unset;
@@ -45,8 +49,4 @@ button[type="submit"] {
     margin: 1em auto; /* TOP/BOTTOM - RIGHT/LEFT*/
     height: 2em;
     font-size: 1.1rem;
-}
-fieldset:last-of-type { /*You can select the last element of a specific type 
-    using the last-of-type CSS pseudo-class, like this: 'fieldset:last-of-type { }' */
-    border-bottom: none;
 }
