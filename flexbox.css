@@ -1,17 +1,50 @@
-.gallery {
-    width: 50%;
-    border: 5px solid red;
+* {
+  box-sizing: border-box;/*The total width of the element, including padding and border, 
+  will be the explicit width set. 
+  The content of the element will shrink to make room for the padding and border.*/
+  /* box-sixing: content-box -DEFAULT-when an element has a specific width, 
+  that width is calculated based only on the element's content.*/
+}
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f5f6f7;
+  }
+  .header {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: #0a0a23;
+    color: #fff;
+    border-bottom: 4px solid #fdb347;
+  }
+  .gallery {/*This makes the element a flex container. 
+    Any direct children of a flex container are called flex items.*/
+    display: flex;
+    flex-direction: row; /*CONTROLS IMG DIRECTION, row-reverse/column/column-reverse*/
+    flex-wrap: wrap; /*DETERMINES IF IMGS wrap or nowrap/SHRINK*/
+    justify-content: center;/*determines how the items inside a flex container are 
+    positioned along the main axis, affecting their position and the space around them.*/
+    padding: 20px 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 16px;/*sets the gaps, also known as gutters, between rows and columns. 
+    The gap property and its row-gap and column-gap sub-properties provide 
+    this functionality for flex, grid, and multi-column layout.*/
+  }
+  .gallery img { /*KEEPS IMAGES UNIFORM SIZE*/
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover; /*This will tell the image to fill the img 
+    container while maintaining aspect ratio, resulting in cropping to fit.*/
+    border-radius: 10px;/*ROUNDS CORNERS*/
+  }
+  .gallery::after {/* pseudo-element creates an element 
+    that is the last child of the selected element. 
+    You can use it to add an empty element after the last image. */
+    content: "";
+    width: 350px;
   }
 
- img {
-    width: 100%;
-    padding: 5px;
-    border: 5px solid blue;
-  }
-  * {
-    box-sizing: border-box;/*The total width of the element, including padding and border, 
-    will be the explicit width set. 
-    The content of the element will shrink to make room for the padding and border.*/
-    /* box-sixing: content-box -DEFAULT-when an element has a specific width, 
-    that width is calculated based only on the element's content.*/
-  }
+  /*Flexbox is a one-dimensional CSS layout that can control the way items are spaced out and aligned within a container.*/
