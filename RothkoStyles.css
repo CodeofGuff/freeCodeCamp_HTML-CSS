@@ -14,8 +14,7 @@
     padding: 50px; /*ADJUST SPACING WITHIN AN ELEMENT / FRAME ON EDGES vs EDGES SPACES*/
     margin: 20px auto; /*VERTICAL x HORIZONTAL */
   }
-  
-  
+
   .one {
     width: 425px;
     height: 150px;
@@ -23,6 +22,7 @@
     margin: 20px auto; /*ALSO PUSHES DOWN OTHER ELEMENT 20px*/
     box-shadow: 0 0 3px 3px #efb762; /*TOP RIGHT BOTTOM LEFT*/
     border-radius: 9px; /*ROUND CORNERS*/
+    transform: rotate(-0.6deg);/*counter clockwise by 0.6 degrees.*/
   }
   
   .two {
@@ -34,6 +34,8 @@
     horizontally center it, and set its bottom margin to 20 pixels.*/
     box-shadow: 0 0 3px 3px #8f0401;
     border-radius: 8px 10px; /*top-left and bottom-right / top-right and bottom-left*/
+    transform: rotate(0.4deg);/*ROTATE CLCOKWISE*/
+
   }
   
   .one, .two {
@@ -47,5 +49,8 @@
     margin: auto;
     filter: blur(2px);
     box-shadow: 0 0 5px 5px #b20403;
+    border-radius: 30px 25px 60px 12px;
+    /*round the top-left, top-right, bottom-right, and bottom-left corners.*/
+    transform: rotate(-0.2deg);
   }
     
