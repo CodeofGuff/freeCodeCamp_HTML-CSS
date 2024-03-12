@@ -1,0 +1,107 @@
+/*Typography is often more art than science. 
+You may have to tweak things like alignment until it looks correct.*/
+
+
+* { /*RESETS BOX MODEL TO KEEP IT 270px AND OVERRIDE BROWSER SETTING*/
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: "Open Sans", sans-serif;
+  }
+
+html { /*CHANGES FONT SIZE FOR HTML DOC*/
+    font-size: 16px;
+  }
+
+header h1 { /*TARGETS SPECIFICALY THE h1 WITHIN header*/
+    text-align: center;
+    margin: -4px 0; /*TOP,BOTTOM / LEFT,RIGHT*/
+    letter-spacing: 0.15px;
+  }
+
+p {
+    margin: 0;
+    display: flex; /*add the horizontal spacing*/
+    justify-content: space-between; /*allows the horizontal spacing*/
+}
+
+.label { /*GROUP DIV CLASS 'LABEL' IN BORDER*/
+    border: 2px solid black;
+    width: 270px;
+    margin: 20px auto; /*CENTER*/
+    padding: 0 7px; /*SETS BORDER AWAY FROM TEXT*/
+}
+
+.divider { /*GIVES class='div' A GREY BOTTOM LINE*/
+    border-bottom: 1px solid #888989;
+    margin: 2px 0;
+  }
+
+.bold {
+    font-weight: 800;/*MAKES class='bold' TEXT BOLDER*/
+  }
+
+.large { /*GIVES class='large' now border height*/
+    height: 10px
+  }
+
+.large, .medium {
+    background-color: black;
+    border: 0; /*OVERRIDES GREY .divider BORDER*/
+  }
+
+.medium { /*BLACK BAR BELOW CALORIES 230*/
+    height: 5px;
+}
+
+.small-text {
+    font-size: 0.85rem;/*rem/root em IS RELATIVE TO THE FONT SIZE OF THE HTML ELE FONTSIZE(16px)*/
+  }
+
+.calories-info h2 {
+    margin: 0;
+  }
+
+.calories-info { /*TAKES 230 and PLACES IT ON THE SAME LINE AS Calories*/
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /*moves tagged element to the end of the container on the cross axis/flex-start, flex-end*/
+  }
+
+.left-container p {
+    margin: -5px -2px;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.daily-value p:not(.no-divider) {/*TARGETS ALL p ELE IN class='daily-value'*/
+    /*The :not() pseudo-selector can be used to select all elements 
+    that do not match the given CSS rule.*/
+    border-bottom: 1px solid #888989;
+  }
+
+.calories-info span { /*TARGETS span WITHIN THE calories-info DIV*/
+    font-size: 2.4em;
+    font-weight: 700;
+    margin: -7px -2px;/*MOVES 230 INTO PLACE, CAN TWEAK UNTIL CORRECT ALIGNMENT*/
+  }
+
+.right { /*ALIGNS % DAILY VAL TO THE RIGHT OF THE BOX*/
+    justify-content: flex-end;
+  }
+
+.indent {
+    margin-left: 1em;
+}
+
+.double-indent {
+    margin-left: 2em;
+  }
+
+.note {
+    font-size: 0.6rem;
+    margin: 5px 0;
+    padding: 0 8px;
+    text-indent: -8px;
+  }
