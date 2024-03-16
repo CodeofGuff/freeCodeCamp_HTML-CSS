@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!--IS THE /> CORRECT, XML vs HTML?-->
+    <meta name="description" content="freeCodeCamp Accessibility Quiz practice project">
+    <link rel="stylesheet" href="accessibility.css">
+    <title>Accessibility Practice Project</title>
+</head>
+    <body>
+        <header>
+        <img id="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg">
+        <h1>HTML/CSS Quiz</h1>
+            <nav>
+                <ul>
+                    <li><a href="#student-info">INFO</a></li><!--ANCHOR ELE WITH #ID ALLOW NAV WITHIN THE PAGE-->
+                    <li><a href="#html-questions">HTML</a></li>
+                    <li><a href="#css-questions">CSS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
+                <section role="region" aria-labelledby="student-info"><!--EVERY REGION REQUIRES A LABEL-->
+                    <h2 id="student-info">Student Information</h2>
+                        <div class="info">
+                            <label for="student-name">Name:</label>
+                            <input type="text" id="student-name" name="student-name">
+                        </div>
+                        <div class="info">
+                            <label for="student-email">Email:</label>
+                            <input type="email" id="student-email" name="student-email">
+                        </div>
+                        <div class="info">
+                            <label for="birth-date">D.O.B.:<span class="sr-only"><span>(Date of Birth)</span></label>
+                            <input type="date" id="birth-date" name="birth-date">
+                        </div>
+                </section>
+                <section role="region" aria-labelledby="html-questions">
+                    <h2 id="html-questions">HTML Questions</h2> 
+                        <div class="question-block">
+                            <p>1</p>
+                            <fieldset class="question" name="question"><legend>HTML is the skeleton of a webpage:</legend>
+                                <ul>
+                                    <li>True</li>
+                                    <li>Flase</li>
+                                </ul>
+                            </fieldset>
+                        </div>
+                        <div class="question-block">
+                            <p>2</p>
+                            <fieldset class="question" name="question"><legend>HTML is used for styling the webpage:</legend>
+                                <ul>
+                                    <li>True</li>
+                                    <li>False</li>></li>
+                                </ul>
+                            </fieldset>
+                        </div>
+                </section>
+                <section role="region" aria-labelledby="css-questions">
+                    <h2 id="css-questions">CSS Questions</h2>
+                </section>
+              </form>
+        </main>
+    </body>
+
+</html>
