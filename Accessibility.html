@@ -40,28 +40,52 @@
                     <h2 id="html-questions">HTML Questions</h2> 
                         <div class="question-block">
                             <p>1</p>
-                            <fieldset class="question" name="question"><legend>HTML is the skeleton of a webpage:</legend>
-                                <ul>
-                                    <li>True</li>
-                                    <li>Flase</li>
+                            <fieldset class="question" name="html-question-one"><legend>HTML is the skeleton of a webpage:</legend><!--html-question-one / IS THAT NORMAL OR SPEICIFC TO THIS USE CASE-->
+                                <ul class="answers-list">
+                                    <li><label for="q1-a1"><input value="true" id="q1-a1" type="radio" name="radio1">True</label></li><!--ALLOWS ID OF SPECIFIC QUESTIONS-->
+                                    <li><label for="q1-a2"><input value="false" id="q1-a2" type="radio" name="radio1">False</label></li>
                                 </ul>
                             </fieldset>
                         </div>
                         <div class="question-block">
                             <p>2</p>
-                            <fieldset class="question" name="question"><legend>HTML is used for styling the webpage:</legend>
-                                <ul>
-                                    <input type="radio"><li>True</li>
-                                    <li>False</li>></li>
+                            <fieldset class="question" name="html-question-two"><legend>HTML is used for styling the webpage:</legend>
+                                <ul class="answers-list">
+                                    <li><label for="q2-a1"><input value="true" id="q2-a1" type="radio" radio="radio2">True</label></li>
+                                    <li><label for="q2-a2"><input value="false" id="q2-a2" type="radio" radio="radio2">False</label></li>
                                 </ul>
                             </fieldset>
                         </div>
                 </section>
                 <section role="region" aria-labelledby="css-questions">
                     <h2 id="css-questions">CSS Questions</h2>
+                    <div class="formrow">
+                        <div class="question-block">
+                            <label for="drop-down">Can the CSS margin property accept negative values?</label></div>
+                        <div class="answer">
+                            <select name="drop-down" id="drop-down" required>
+                                <option value="">Select an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div class="question-block">
+                            <label for="text-area">Do you have any questions?:</label></div>
+                        <div class="answer">
+                            <textarea name="text-area" id="text-area" placeholder="Help" rows="3" cols="20"></textarea>
+                        </div>
+                    </div>
                 </section>
+                <button type="submit">Send</button>
               </form>
         </main>
+        <footer>
+            <address>
+                <a href="https://freecodecamp.org">freeCodeCamp</a><br>
+                San Francisco<br>
+                California<br>
+                USA
+            </address>
+        </footer>
     </body>
-
 </html>

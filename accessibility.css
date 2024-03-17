@@ -3,40 +3,96 @@ body {
     color: #1b1b32;
     font-family: Helvetica;
     margin: 0;
-  }
+}
 
 header {
     width: 100%;
     height: 50px;
     background-color: #1b1b32;
+    justify-content: space-between;
     display: flex;
-  }
+    align-items: center;
+    position: fixed; /*KEEPS HEADER ON TOP OF SCREEN WHILE SCROLLING*/
+    top: 0; /*HOW FAR TO BAR IS FROM THE TOP OF BROWSER*/
+}
   
 h1 {
     color: #f1be32;
-    font-size: min(5vw, 1.2em)
-  }
+    font-size: min(5vw, 1.2em);
+    text-align: center;
+}
+
+input {
+  font-size: 16px;
+}
+
+label {
+  text-align: right;
+}
+
+main {
+  padding-top: 50px;
+}
 
 h1,
 h2 {
     font-family: Verdana, Tahoma;
-  }
+}
   
 h2 {
     border-bottom: 4px solid #dfdfe2;
-  }
+    margin-top: 0; 
+    padding-top: 60px;
+}
 
 nav {
     width: 50%;
     max-width: 300px;
     height: 50px;
-  }
+}
 
 nav > ul { /*The child combinator selector > is used between selectors 
     to target only elements that match the second selector 
     and are a direct child of the first selector.*/
-    justify-content: space-evenly; /*JUSTIFY + DISPLAY = FLEXBOX*/
+    justify-content: space-around; /*JUSTIFY + DISPLAY = FLEXBOX*/
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
+}
+
+nav li {
+    color: #dfdfe2;
+    margin: 0 0.2rem;
+    padding: 0.2rem;
+    display: block;
+}
+nav li:hover { /*CHANGES HOVER BEHAIVIOR*/
+  cursor: pointer;
+  color: #1b1b32;
+  background-color: #dfdfe2;
+}
+
+p {
+  margin-top: 5px;
+  padding-left: 15px;
+  font-size: 20px;
+}
+
+li > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+section {
+    width: 80%;
+    margin-bottom: 10px;
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 600px
 }
 
 #logo { /*ALLOWS SVG (scalable vacetor graphics)IMG TO BE SCALED WITHOUT EFFECTING RES*/
@@ -56,4 +112,39 @@ nav > ul { /*The child combinator selector > is used between selectors
     white-space: nowrap;
     border: 0;
     margin: -1px;
+}
+
+.info {
+  padding: 10px 0 0 5px;
+}
+
+.question-block {
+  text-align: left;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 5px;
+}
+
+.info input {
+  width: 50%;
+  text-align: left; 
+}
+
+.info label {
+  width: 10%;
+  min-width: 55px;
+}
+
+.info label, .info input { /*ALIGNS NAME,EMAIl,DOB BOXES WITH EACH OTHER*/
+  display: inline-block;
+}
+
+.formrow {
+  margin-top: 30px;
+  padding: 0 15px;
+}
+
+p::before { /*PSUEDO ELEMENT PLACES "Question" AND CORISPONDING # To prevent unnecessary repetition,*/
+  content: "Question #";
 }
