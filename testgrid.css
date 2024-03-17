@@ -1,0 +1,11 @@
+.container {
+    border: solid 2px black;
+    margin-right: 54em;
+    display: grid;
+    grid-template: 25px 25px / 25PX 25PX;
+    grid-auto-rows: 5px;
+
+}
+div {
+    padding: auto;
+}
