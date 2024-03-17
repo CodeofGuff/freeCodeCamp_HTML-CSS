@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!--IS THE /> CORRECT, XML vs HTML?-->
     <meta name="description" content="freeCodeCamp Accessibility Quiz practice project">
-    <link rel="stylesheet" href="accessibility.css">
+    <link rel="stylesheet" href="accessibility.css"><!--EXTERNAL STYLE SHEET <style></> TO APPLY INLINE CSS-->
     <title>Accessibility Practice Project</title>
 </head>
     <body>
@@ -22,7 +22,7 @@
         <main>
             <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
                 <section role="region" aria-labelledby="student-info"><!--EVERY REGION REQUIRES A LABEL-->
-                    <h2 id="student-info">Student Information</h2>
+                    <h2 id="student-info">Student Information</h2><!--CAN INSERT COLOR WITH style=""-->
                         <div class="info">
                             <label for="student-name">Name:</label>
                             <input type="text" id="student-name" name="student-name">
