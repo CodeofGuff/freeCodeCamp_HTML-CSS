@@ -1,6 +1,4 @@
-* {
-    background-color: #d0d0d5;
-}
+
 html {
     box-sizing: border-box;
 }
@@ -11,18 +9,23 @@ body {
 }
 
 span[class~="sr-only"] { /*COMMON SET TO ENSURE ALL ELES ARE HIDDEN VISUALLY*/
-    border: 0;
-    clip: rect(1px, 1px, 1px, 1px);/*DEFINE THE VISIBLE PORTIONS OF AN ELE*/
-    clip-path: inset(50%);/*DETERMINES SHAPES OF CLIP PROPERTY - inset(50%) TURNS CLIPPATH INTO A RECTANGLE*/
-    width: 1px;
-    height:1px;
-    overflow: hidden; /*PREVENTS CONTENT FROM OVERFLOWING*/
-    white-space: nowrap; /*PREVENTS CONTENT FROM OVERFLOWING*/
-    position: absolute; /*ENSURES ELEMENTS ARE NO LONGER IN PAGE VIEW*/
-    padding: 0; /*ENSURES ELEMENTS ARE NO LONGER IN PAGE VIEW*/
-    margin: -1px; /*ENSURES ELEMENTS ARE NO LONGER IN PAGE VIEW OR DOC FLOW*/
+    border: 0 !important;/*!important ENSURES PROPERTIES ARE ALWAYS APPLIED*/
+    clip: rect(1px, 1px, 1px, 1px) !important;/*DEFINE THE VISIBLE PORTIONS OF AN ELE*/
+    clip-path: inset(50%) !important;/*DETERMINES SHAPES OF CLIP PROPERTY - inset(50%) TURNS CLIPPATH INTO A RECTANGLE*/
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important; /*PREVENTS CONTENT FROM OVERFLOWING*/
+    white-space: nowrap !important; /*PREVENTS CONTENT FROM OVERFLOWING*/
+    position: absolute !important; /*ENSURES ELEMENTS ARE NO LONGER IN PAGE VIEW*/
+    padding: 0 !important; /*ENSURES ELEMENTS ARE NO LONGER IN PAGE VIEW*/
+    margin: -1px !important; /*ENSURES ELEMENTS ARE NO LONGER IN PAGE VIEW OR DOC FLOW*/
 }
 
+/*REMOVED AS WE ASSIGNED ALL span ELES A STYLE --
+span {  /* :not(.sr-only) psuedo TARGETS ELES THAT DO NOT MATCH THE SELECTOR, span eles that do not have the sr-only class- REMOVED WHEN !important WAS APPLIED
+    font-weight: normal;
+} 
+  --- */
 h1 {
     max-width: 37.25rem;
     margin: 0 auto;
@@ -47,6 +50,89 @@ section {/*GIVES THE TABLE A BORDER*/
     max-width: 40rem;/*FOR RESPONSIVE DESIGN*/
     margin: 0 auto;/*CENTERS*/
     border: 2px solid #d0d0d5;
+}
+
+table {
+    border-collapse: collapse; /*ALLOWS CELL BORDERS TO COLLAPSE INTO SINGLE BORDER, INSTEAD OF ON EACH INDUVIDUAL CELL*/
+    border: 0; /*HIDES BORDERS*/
+    width: 100%; /*FILLS EACH CONTAINER*/
+    margin-top: 3rem;
+    position: relative;
+}
+
+table caption { /*STYLES THE CAPTION ELES*/
+    color: #356eaf;
+    font-size: 1.3em;
+    font-weight: normal;
+    position: absolute;
+    top: -2.25rem;
+    left: 0.5rem;
+}
+
+tbody td { /*SETTING THIS ENSURES A FIXED WIDTH SO THEY DO NOT SHRINK WITHIN THE CONTAINER*/
+    width: 100vw;
+    max-width: 4rem;
+    min-width: 4rem;
+}
+
+tbody th {
+    width: calc(100% - 12rem);/*GIVES A WIDTH OF ENTIRE CONTAINER, LESS 12re*/
+}
+
+tr[class="total"] { /*[attribute="value"] TARGETS ELE THAT HAS AN ATTRIBUTE WITH A SPECIFIC VALUE*/
+    border-bottom: 4px double #0a0a23;/*CREATES BOTTOM BORDER BETWEEN EACH MAJOR CELL/BLOCK*/
+    font-weight: bold;
+}
+
+tr[class="data"] { /*CREATES GREY BOX AROUND THE DATA*/
+    background-image: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem);
+}
+
+tr[class="total"] th {/*TARGETS TH ELES WITHIN THE TRs WHERE class="total"*/
+    text-align: left;
+    padding: 0.5rem 0 0.25rem 0.5rem;
+}
+/*tr.total SELECTS tr ELES WHERE THE CLASS INCLUDES total - tr[class="total"] SELECTS TR ELES WHERE THE ONLY CLASS IS total*/
+tr.total td { /* TARGETS td ELES WITHING THE .total ROWS*/
+    text-align: right;
+    padding: 0 0 .25rem;
+
+}
+
+tr.total td:nth-of-type(3) { /*PSUEDO-SELECTOR USED TO TARGET SPECIFIC ELES BASED ON THEIR ORDER AMONG SINBLINGS OF THE SAME TYPE*/
+    padding-right: 0.5rem;/*TARGETS 3rd td ELE WITH THE total TABLE ROWS*/
+}
+
+tr.total:hover {/*CREATES HOVER EFFECT ON TOTAL ROWS THAT CHANGES BACKGROUND COLOR*/
+    background: #99c9ff
+}
+
+tr.data th {
+    text-align: left;
+    padding-top: 0.3rem;
+    padding-left: 0.5rem;
+}
+
+tr.data td { /*ALIGNS DOLLAR AMOUNTS*/
+    vertical-align: top;
+    text-align: right;
+    padding: 0.3rem 0.25rem 0;
+}
+
+tr.data td:last-of-type { /*TARGETS LAST OF THE TD ELES WITHIN DATA TABLE ROWS*/
+    padding-right: 0.5rem;
+}
+
+tr.data th .description {/*TARGETS ELES WITHTIN class="description" WITHIN TH ELES, WITHIN THE data TABLE ROWS*/
+    display: block;
+    font-style: italic;
+    font-weight: normal;
+    padding: 1rem 0 0.75rem;
+    margin-right: -13.5rem;
+}
+
+td[class="current"] { /*TARGETS current TD ROWS AND MAKES THEM ITALIC*/ 
+    font-style: italic;
 }
 
 #years {

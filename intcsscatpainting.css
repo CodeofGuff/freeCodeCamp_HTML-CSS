@@ -1,0 +1,35 @@
+* { /*UNIVERSAL SELECTOR ENSURES ELES INCLUDE PADDING AND BORDER IN THEIR SPECIFFIED WIDHT AND HEIGHT*/
+    box-sizing: border-box;
+}
+
+body { 
+    background-color: #c9d2fc;
+}
+
+.cat-head { /*CREATES BLACK 'CAT HEAD' CIRCLE / DEFINES CAT HEAD BORDERS*/
+    width: 205px;
+    height: 180px;
+    border: 1px solid #000;
+    border-radius: 46%;
+    background: linear-gradient(#5e5e5e 85%, #45454f 100%); /*linear-gradient FUNCTION SETS GRADIENT COLORS FOR HEAD BACKGROUND*/
+    position: fixed; 
+    /*ALLOWS POSIITONING OF AN ELE WITH static, absolute, relative, sticky, fixed, STATIC IS DEFAULT, CANNOT MOVE PROPERTIES WITH STATIC*/
+    /*relative ALLOWS ELE TO BE POSITIONED IN THE NORMAL FLOW OF THE DOC BUT THE top, left, bottom, right VALUES BECOME ACTIVE*/
+    /*absolute ELE IS TAKEN OUT OF THE NORMAL DOC FLOW AND POSITION IS DETERMINED BY THE t,r,l,b PROPERTIES*/
+    /*fixed ELE IS FIXED TO THE PAGE NO MATTER WHERE USER SCROLLS*/
+    /*sticky ALLOWS ELE TO STICK TO A SPECIFIC POS WITHIN THE CONTAING ELE/VIEWPORT BASED ON SCROLL POS*/
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto; /*ONE WAY OF CENTERING CAT HEAD // pos: aboslute / t,r,b,l: 0 / margin:0 // */
+}
+
+/*EXAMPLE OF A LONG RECTANGLE BOX FIXED ON BOTTOM OF SCREEN */
+/* .box {
+    width: 200px;
+    height: 600px;
+    background-color: #000;
+    position: absolute; 
+    top: 800px;
+    left: 650px; */
