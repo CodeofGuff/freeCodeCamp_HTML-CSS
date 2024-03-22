@@ -1,0 +1,79 @@
+html { /*RESETS BOX MODEL AS BROWSERS APPLY DEFAULT MARGIN AND PADING VALUES TO SPECIFIC ELES*/
+    box-sizing: border-box;/*TELLS ALL TARGETED ELES TO USE THE SAME VALUE AS THE PARENT ELE*/
+}
+
+*, ::before, ::after { /*TARGETS ALL ELES, AND PSEUDO ELES ::before, ::after*/
+    box-sizing: inherit;
+}
+/*::before SELECTOR CRESATES A PSEUDO ELE WHICH IS THE FIST CHILD OF THE SELECTED ELE, 
+  ::after SELECTOR CREATES A PSEUDO ELE WHICH IS THE LAST CHILD OF THE SELECTED ELE,
+  THESE ARE USED USUALLY TO CREATE COSMETIC CONTENT*/
+
+#piano {
+    position: relative; /*img NEEDS ITS PARENT id='piano' TO HAVE A POSITION SET AS A POINT OF REFERENCE*/
+    background-color: #00471b;
+    width: 992px;
+    height: 290px;
+    margin: 80px auto;
+    padding: 90px 20px 0 20px;
+    border-radius: 10px; /*HELPS GIVE PIANO KEYS SMOOTH EDGES*/
+}
+
+.key {
+    background-color: #ffffff; /*CREATES WHITE STACKED KEYS*/
+    position: relative; /* " */
+    width: 41px; /* " */
+    height: 175px; /* " */
+    margin: 2px;/*SEPERATES AND SPREADS KEYS ONTO PIANO*/
+    float: left;/* "" */
+    border-radius: 0 0 3px 3px; /*HELPS GIVE PIANO KEYS SMOOTH EDGES*/
+}
+
+.keys {
+    background-color: #040404;
+    width: 949px;
+    height: 180px;
+    padding-left: 2px;
+    overflow: hidden; /*HIDES ANY ELE PUSHED OUTSIDE THE SET width*/
+}
+
+.key.black--key::after { /*TARGETS ELES WITH CLASS key black--key AND THE SELECT PSEUDO ELE AFTER THESE ELES IN THE HTML*/
+    position: absolute;
+    left: -18px;
+    width: 32px;
+    height: 100px;
+    background-color: #1d1e22;
+    content: ""; /*MAKES PSEUDO ELES EMPTY BUT ADDING "" MAKES SURE IT IT IS RENDERED WHILE STILL EMPTY,
+                 content USED TO SET OR OVERRIDE CONTENT OF THE ELE*/
+    border-radius: 0 0 3px 3px; /*HELPS GIVE PIANO KEYS SMOOTH EDGES*/
+}
+
+.logo {
+    position: absolute;
+    top: 23px;
+    width: 200px;
+}
+
+/*MEDIA QUERY USED TO CONDITIONALLY APPLY CSS, 
+COMMONLY USED TO APPLY CSS BASED OF THE VIEWPORT WIDTH USING max-width/min-width*/
+@media (max-width: 768px) { 
+    #piano {
+        width: 358px;
+    }
+    .keys {
+        width: 318px;
+    }
+    .logo {
+        width: 150px;
+    }
+}
+
+/*() and () / AND IS A LOGICAL OPERATOR TO CONSTRUCT MORE COMPLEX MEDIA QUERIES / TARGETS DISPLAY WIDTH BETWEEN EACH VALUE*/
+@media (min-width: 769px) and (max-width: 1199px) { 
+    #piano {
+        width: 675px;
+    }
+    .keys {
+        width: 633px;
+    }
+}

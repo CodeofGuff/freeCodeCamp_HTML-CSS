@@ -22,17 +22,194 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    margin: auto; /*ONE WAY OF CENTERING CAT HEAD // pos: aboslute / t,r,b,l: 0 / margin:0 // */
+    margin: auto; /*ONE WAY OF CENTERING CAT HEAD // pos: aboslute / t,r,b,l: 0 / margin: 0 // */
 }
 
 .cat-left-ear {
     position: absolute;
     top: -26px;
     left: -31px;
+    z-index: 1; /*DEFINES THE ORDER OF OVERLAPPING HTML ELES. HIGHER = OVER, LOWER - UNDER*/
+    border-top-left-radius: 90px;
+    border-top-right-radius: 10px;
+    transform: rotate(-45deg); 
+    /*TRANSFORM ALLOWS MODIFICATION OF SHAPE, POSITION, AND SIZE OF AN ELE WITHOUT CHANGING THE LAYOUT OR AFFECTING THE SURROUDING ELES*/
+    /*transform: rotate/scale/skew/matrix();*/
     border-left: 35px solid transparent;
     border-right: 35px solid transparent;
     border-bottom: 70px solid #5e5e5e;
 }
+
+.cat-left-inner-ear {
+    position: absolute;
+    top: 22px; /*PLACES INNER EAR INTO POSITION WITHIN THE EAR*/
+    left: -20px;
+    border-bottom-right-radius: 40%; /*ROUNDS OUT CORNER SOF INNER EAR*/
+    border-bottom-left-radius: 40%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 90px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid #3b3b4f;
+}
+
+.cat-right-ear {
+    position: absolute;
+    top: -26px;
+    left: 163px;
+    z-index: 1;
+    border-top-left-radius: 90px;
+    border-top-right-radius: 10px;
+    transform: rotate(45deg);
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    border-bottom:  70px solid #5e5e5e;
+}
+
+.cat-right-inner-ear {
+    position: absolute;
+    top: 22px;
+    left: -20px;
+    border-bottom-right-radius: 40%; /*ROUNDS OUT CORNERS OF INNER EAR*/
+    border-bottom-left-radius: 40%; /*CAN ALSO BE border-radius: 90px 10px 40% 40%*/
+    border-top-right-radius: 10px;
+    border-top-left-radius: 90px;
+    border-left: 20px solid transparent;/*CREATES THE COLORED TRIANGLE*/
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid #3b3b4f;
+}
+
+.cat-left-eye {
+    position: absolute;
+    top: 54px;
+    left: 39px;
+    border-radius: 60%; /*MAKES EYE SHAPE/OVAL*/
+    transform: rotate(25deg);
+    width: 30px;
+    height: 40px;
+    background-color: #000;
+}
+
+.cat-left-inner-eye {
+    position: absolute;
+    top: 8px;
+    left: 2px;
+    border-radius: 60%; /*MAKES EYE SHAPE/OVAL*/
+    transform: rotate(10deg);
+    width: 10px;
+    height: 20px;
+    background-color: #fff;
+}
+
+.cat-right-eye {
+    position: absolute;
+    top: 54px;
+    left: 134px;
+    border-radius: 60%; /*MAKES EYE SHAPE/OVAL*/
+    transform: rotate(-25deg);
+    width: 30px;
+    height: 40px;
+    background-color: #000;
+}
+
+.cat-right-inner-eye {
+    position: absolute;
+    top: 8px;
+    left: 18px;
+    border-radius: 60%; /*MAKES EYE SHAPE/OVAL*/
+    transform: rotate(-5deg);
+    width: 10px;
+    height: 20px;
+    background-color: #fff;
+}
+
+.cat-nose {
+    position: absolute;
+    top: 108px;
+    left: 85px;
+    border-radius: 50% 0 50% 50%; /*TOP LEFT, TOP RIGHT, BOTTOM RIGHT, BOTTOM LEFT*/
+    transform: rotate(180deg);
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 20px solid #442c2c;
+}
+
+.cat-mouth div { /*DESCENDANT SELECTOR: SELECTS ALL DIV ELES INSIDE class="cat-mouth"*/
+    width: 30px;
+    height: 50px;
+    border: 2px solid #000;
+    border-color: black transparent transparent transparent; /*CREATES ELLIPTICAL SHAPE WITH THE MOUTH LINES*/
+    border-radius: 190%/190px 150px 0 0; /*CREATES ELLIPTICAL SHAPE WITH THE MOUTH LINES*/
+} 
+
+.cat-mouth-line-left {
+    position: absolute;
+    top: 88px;
+    left: 74px;
+    transform: rotate(170deg);
+}
+
+.cat-mouth-line-right {
+    position: absolute;
+    top: 88px;
+    left: 91px;
+    transform: rotate(165deg);
+}
+
+.cat-whiskers-left div {
+    width: 40px;
+    height: 1px;
+    background-color: #000;
+}
+
+.cat-whisker-left-top {
+    position: absolute;
+    top: 120px;
+    left: 52px;
+    transform: rotate(10deg);
+}
+
+.cat-whisker-left-middle {
+    position: absolute;
+    top: 127px;
+    left: 52px;
+    transform: rotate(3deg);
+}
+
+.cat-whisker-left-bottom {
+    position: absolute;
+    top: 134px;
+    left: 52px;
+    transform: rotate(-3deg);
+}
+
+.cat-whiskers-right div {
+    width: 40px;
+    height: 1px;
+    background-color: #000;
+}
+
+.cat-whisker-right-top {
+    position: absolute;
+    top: 120px;
+    left: 109px;
+    transform: rotate(-10deg);
+}
+
+.cat-whisker-right-middle {
+    position: absolute;
+    top: 127px;
+    left: 109px;
+    transform: rotate(-3deg);
+}
+
+.cat-whisker-right-bottom {
+    position: absolute;
+    top: 134px;
+    left: 109px;
+    transform: rotate(3deg);
+}
+
 
 /*EXAMPLE OF A LONG RECTANGLE BOX FIXED ON BOTTOM OF SCREEN */
 /* .box {
